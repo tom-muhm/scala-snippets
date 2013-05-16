@@ -71,9 +71,9 @@ scalacOptions <++= scalaVersion map { sv =>
 javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation")
 
 /* entry point */
-mainClass in (Compile, packageBin) := Some("scalasnippets.Main")
+mainClass in (Compile, packageBin) := Some("Main")
 
-mainClass in (Compile, run) := Some("scalasnippets.Main")
+mainClass in (Compile, run) := Some("Main")
 
 // CONTINUATIONS
 // autoCompilerPlugins := true
@@ -82,6 +82,8 @@ mainClass in (Compile, run) := Some("scalasnippets.Main")
 
 /* dependencies */
 libraryDependencies ++= Seq (
+  // -- network --
+  "net.databinder.dispatch" %% "dispatch-core" % "0.10.0"
   // -- lang --
   // "org.apache.commons" % "commons-lang3" % "3.1",
   // "org.scalaz" %% "scalaz-core" % "7.0.0-M7",
@@ -119,8 +121,6 @@ libraryDependencies ++= Seq (
   // -- concurrency --
   // "com.typesafe.akka" %% "akka-actor" % "2.2-SNAPSHOT",
   // "org.scala-stm" %% "scala-stm" % "0.7",
-  // -- network --
-   // "net.databinder.dispatch" %% "dispatch-core" % "0.9.2",
   // -- testing --
   // "org.scalacheck" %% "scalacheck" % "1.10.0" % "test",
   // "org.specs2" %% "specs2" % "1.13",
@@ -197,7 +197,7 @@ pomExtra := (
 // http://www.scala-sbt.org/using_sonatype.html
 
 /* assembly plugin */
-mainClass in AssemblyKeys.assembly := Some("com.example.scala-snippets.Main")
+mainClass in AssemblyKeys.assembly := Some("Main")
 
 assemblySettings
 
