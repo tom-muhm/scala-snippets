@@ -18,3 +18,8 @@ project/plugins/project/
 .project
 .settings
 target
+
+# IDEA
+*.idea
+*.iml
+*.eml
