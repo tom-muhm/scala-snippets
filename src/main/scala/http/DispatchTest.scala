@@ -6,9 +6,12 @@ object DispatchTest {
 
   def start(page: String) = {
     val svc = url(page)
-    val country = Http(svc OK as.String)
-    val c = country()
-    println(c)
+    val country = Http(svc)
+    val headers = country().getHeaders()
+    //    val c = country()
+    //    println(country)
+    println(headers)
+
   }
 
 }
