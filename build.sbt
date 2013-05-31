@@ -84,7 +84,8 @@ mainClass in (Compile, run) := Some("Main")
 libraryDependencies ++= Seq (
   // -- network --
   "net.databinder.dispatch" %% "dispatch-core" % "0.10.0",
-  "org.scalaj" %% "scalaj-http" % "0.3.6"
+  "org.scalaj" %% "scalaj-http" % "0.3.6",
+  "org.apache.httpcomponents" % "httpclient" % "4.2.5"
   // -- lang --
   // "org.apache.commons" % "commons-lang3" % "3.1",
   // "org.scalaz" %% "scalaz-core" % "7.0.0-M7",
